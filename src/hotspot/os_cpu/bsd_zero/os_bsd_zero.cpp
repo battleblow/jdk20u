@@ -97,16 +97,10 @@ address os::Posix::ucontext_get_pc(const ucontext_t* uc) {
     return (address)uc->uc_mcontext.gregs[REG_EIP];
 #elif defined(AMD64)
     return (address)uc->uc_mcontext.gregs[REG_RIP];
-#elif defined(ARM)
-    return (address)uc->uc_mcontext.arm_pc;
 #elif defined(AARCH64)
     return (address)uc->uc_mcontext.pc;
 #elif defined(PPC)
     return (address)uc->uc_mcontext.regs->nip;
-#elif defined(RISCV)
-    return (address)uc->uc_mcontext.__gregs[REG_PC];
-#elif defined(S390)
-    return (address)uc->uc_mcontext.psw.addr;
 #else
     // Non-arch-specific Zero code does not really know the PC.
     // If possible, add the arch-specific definition in this method.
