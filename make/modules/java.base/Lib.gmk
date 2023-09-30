@@ -46,6 +46,7 @@ $(eval $(call SetupJdkLibrary, BUILD_LIBNET, \
     DISABLED_WARNINGS_gcc_net_util_md.c := format-nonliteral, \
     DISABLED_WARNINGS_gcc_NetworkInterface.c := unused-function, \
     DISABLED_WARNINGS_clang_net_util_md.c := format-nonliteral, \
+    DISABLED_WARNINGS_clang_DefaultProxySelector.c := deprecated-non-prototype, \
     DISABLED_WARNINGS_microsoft_InetAddress.c := 4244, \
     DISABLED_WARNINGS_microsoft_NetworkInterface.c := 4133, \
     DISABLED_WARNINGS_microsoft_NetworkInterface_winXP.c := 4133, \
