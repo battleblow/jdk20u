@@ -152,7 +152,7 @@ $(eval $(call SetupJdkLibrary, BUILD_LIBAWT, \
     DISABLED_WARNINGS_gcc_Region.c := maybe-uninitialized, \
     DISABLED_WARNINGS_gcc_SurfaceData.c := unused-value, \
     DISABLED_WARNINGS_gcc_TransformHelper.c := sign-compare, \
-    DISABLED_WARNINGS_clang_awt_ImagingLib.c := sign-compare, \
+    DISABLED_WARNINGS_clang_awt_ImagingLib.c := sign-compare deprecated-non-prototype, \
     DISABLED_WARNINGS_clang_awt_parseImage.c := sign-compare, \
     DISABLED_WARNINGS_clang_debug_mem.c := extern-initializer format-nonliteral, \
     DISABLED_WARNINGS_clang_debug_trace.c := format-nonliteral, \
