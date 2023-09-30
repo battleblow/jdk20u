@@ -249,7 +249,7 @@ ifeq ($(call isTargetOs, windows macosx), false)
         WARNINGS_AS_ERRORS_xlc := false, \
         DISABLED_WARNINGS_clang_awt_Taskbar.c := parentheses, \
         DISABLED_WARNINGS_clang_gtk2_interface.c := parentheses, \
-        DISABLED_WARNINGS_clang_gtk3_interface.c := parentheses, \
+        DISABLED_WARNINGS_clang_gtk3_interface.c := parentheses deprecated-non-prototype, \
         DISABLED_WARNINGS_clang_OGLBufImgOps.c := format-nonliteral, \
         DISABLED_WARNINGS_clang_OGLPaints.c := format-nonliteral, \
         DISABLED_WARNINGS_clang_sun_awt_X11_GtkFileDialogPeer.c := parentheses, \
