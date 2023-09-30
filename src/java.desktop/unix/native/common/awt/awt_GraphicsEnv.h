@@ -50,7 +50,9 @@
 #define MITSHM_PERM_COMMON (0666)
 #define MITSHM_PERM_OWNER  (0600)
 
+#ifndef _ALLBSD_SOURCE
 extern int XShmQueryExtension();
+#endif
 
 void TryInitMITShm(JNIEnv *env, jint *shmExt, jint *shmPixmaps);
 void resetXShmAttachFailed();
