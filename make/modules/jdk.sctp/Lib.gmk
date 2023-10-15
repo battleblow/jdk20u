@@ -37,6 +37,9 @@ ifeq ($(call isTargetOsType, unix), true)
   ifeq ($(OPENJDK_TARGET_OS_ENV), bsd.freebsd)
     SCTP_SUPPORTED=true
   endif
+  ifeq ($(RELEASE_FILE_OS_NAME), DragonFly)
+    SCTP_SUPPORTED=false
+  endif
 
   ifeq ($(SCTP_SUPPORTED), true)
     $(eval $(call SetupJdkLibrary, BUILD_LIBSCTP, \
